@@ -26,5 +26,17 @@ sheet_obj = workbk_obj.active
 
 Datatable_Name = workbk_obj.sheetnames
 
+Column_Values = [column.value for column in sheet_obj[1]]
+
+print(Column_Values)
+
+insert_rows = []
+
+for i in sheet_obj.iter_rows(min_row=2, values_only=True):
+    insert_rows.append(i)
+
+
+
+
 
 
